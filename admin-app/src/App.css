@@ -1,7 +1,12 @@
 :root {
 	--dark-ppl: #0f0326;
+	--light-ppl: #1b0346;
+	--sidebar-bg: #293042;
+	--body-bg: #f7f9fc;
+	/* --light-ppl: ##1f618d; */
 	--bby-blue: #92bcea;
 	--pale-gray: #eaeaea;
+	--pale-2: #6c757d;
 	/* TRANSITIONS */
 	--sht-trans: all 200ms ease-in-out;
 	--med-trans: all 0.5s ease-in-out;
@@ -19,5 +24,5 @@
 }
 
 nav {
-	background: var(--dark-ppl);
+	background: var(--light-ppl);
 }

@@ -5,6 +5,7 @@ import { GoSignOut } from "react-icons/go";
 import { navInfo } from "../appData";
 import { uid } from "react-uid";
 import styled from "styled-components";
+import ReactTooltip from "react-tooltip";
 
 function Navigation() {
 	const [mobileView, setMobileView] = useState(false);
@@ -39,12 +40,19 @@ function Navigation() {
 								const { icon, tip, tag } = info;
 								console.log(tip);
 								return (
-									<Nav.Link className="nav__link-icon" key={uid(info)}>
+									<Nav.Link
+										data-tip="React-tooltip"
+										className="nav__link-icon"
+										key={uid(info)}>
 										<div
 											className={
 												mobileView ? "flexed py-1 px-2 my-1 icon-wrap" : "mx-3"
 											}>
 											<span>{icon}</span>
+											<StyledReactTooltip
+												place="left"
+												type="dark"
+												effect="float"></StyledReactTooltip>
 											{mobileView && <h6 className="mb-0"> {tag} </h6>}
 											<Badge className="icon-badge">10</Badge>
 										</div>
@@ -198,4 +206,8 @@ const NavItemsContainer = styled.div`
 	// 	/* disp */
 	// 	display: flex;
 	// 	flex-direction: column !important;
+`;
+
+const StyledReactTooltip = styled(ReactTooltip)`
+	background: red !important;
 `;
