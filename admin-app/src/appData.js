@@ -18,6 +18,7 @@ import {
 	AiOutlineAppstore,
 	AiOutlineBars,
 	AiOutlinePieChart,
+	AiOutlineFundProjectionScreen,
 } from "react-icons/ai";
 
 export const navInfo = [
@@ -67,6 +68,19 @@ export const sidebarTopInfo = [
 		badge: "Special",
 		badgeVariant: "secondary",
 		children: ["Sign In", "Sign Up", "Reset Password", "Error Pages"],
+	},
+	{
+		icon: <AiOutlineFundProjectionScreen />,
+		title: "Layouts",
+		dropArrow: true,
+		children: [
+			"Sticky Sidebar",
+			"Sidebar Collapsed",
+			"Boxed Layout",
+			"Classic Theme",
+			"Corporate Theme",
+			"Modern Theme",
+		],
 	},
 	{
 		icon: <FaBookReader />,

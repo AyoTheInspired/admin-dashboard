@@ -38,7 +38,6 @@ function Navigation() {
 						<Nav className="align-items-end">
 							{navInfo.map((info, id) => {
 								const { icon, tip, tag } = info;
-								console.log(tip);
 								return (
 									<Nav.Link
 										data-tip="React-tooltip"

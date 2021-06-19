@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Container, Row } from "react-bootstrap";
 import Sidebar from "./Sidebar";
 import Content from "./Content";
+import AccordionTest from "../AccordionTest";
 
 function Body() {
 	return (

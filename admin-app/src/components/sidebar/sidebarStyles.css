@@ -11,7 +11,8 @@
 }
 
 .sidebar__item-header,
-.sidebar-toggle {
+.sidebar-toggle,
+.card {
 	background: transparent !important;
 	box-shadow: none !important;
 	border: none !important;
@@ -20,15 +21,21 @@
 .sidebar-toggle {
 	cursor: pointer;
 	transition: var(--sht-trans);
+	background: transparent !important;
 }
 
-.sidebar-toggle:hover {
-	color: var(--pale-gray);
+.sidebar-toggle:hover,
+.sidebar__item-child:hover {
 	color: #ccc;
 }
 
 .sidebar__title-icon {
 	font-size: 18px;
+}
+
+.sidebar__item-child {
+	list-style: none;
+	cursor: pointer;
 }
 
 .sidebar__item-a {

@@ -8,7 +8,7 @@ import ReactTooltip from "react-tooltip";
 function Home() {
 	return (
 		<div>
-			<Navigation />
+			{/* <Navigation /> */}
 			<Body />
 			{/* <Footer /> */}
 			{/* <Tooltips /> */}
