@@ -8,15 +8,7 @@ import ReactTooltip from "react-tooltip";
 function Home() {
 	return (
 		<div>
-			{/* <Navigation /> */}
 			<Body />
-			{/* <Footer /> */}
-			{/* <Tooltips /> */}
-			<div>
-				IM THE HOMEPAGE
-				<a data-tip="React-tooltip">Hover Here</a>
-				<ReactTooltip place="right" type="dark" effect="float"></ReactTooltip>
-			</div>
 		</div>
 	);
 }

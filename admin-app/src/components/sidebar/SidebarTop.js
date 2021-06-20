@@ -7,12 +7,10 @@ import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import { uid } from "react-uid";
 
 function SidebarTop() {
-	// const [itemClicked, setItemClicked] = useState(true);
-
 	return (
-		<Wrap>
-			<h6 className="mb-0 my-3 text-white">Pages</h6>
-			<Accordion key={uid(new Date())}>
+		<Wrap className="px-3">
+			<h6 className="mb-1 mt-2 text-white main__title">Pages</h6>
+			<Accordion>
 				<Card className="card">
 					{sidebarTopInfo.map((info) => {
 						const { icon, title, dropArrow, badge, badgeVariant, children } =
@@ -23,11 +21,10 @@ function SidebarTop() {
 								<Accordion.Toggle
 									as={Card.Header}
 									eventKey={title}
-									key={uid(title)}
 									className="sidebar-toggle d-flex justify-content-between align-items-center px-0 py-1">
 									<div className="sidebar__item-a">
 										<span className="sidebar__title-icon mr-2">{icon}</span>
-										<h6 className="mb-0"> {title} </h6>
+										<h6 className="mb-0 sub__title mt-2"> {title} </h6>
 									</div>
 									<div className="ml-auto">
 										{dropArrow ? (
@@ -46,7 +43,7 @@ function SidebarTop() {
 									</div>
 								</Accordion.Toggle>
 								<Accordion.Collapse eventKey={title}>
-									<Card.Body className="accordion__body">
+									<Card.Body className="accordion__body py-0">
 										{children?.map((child, id) => (
 											<li className="sidebar__item-child my-2">
 												<a>{child}</a>

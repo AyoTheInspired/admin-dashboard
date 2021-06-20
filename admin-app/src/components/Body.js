@@ -8,7 +8,7 @@ import AccordionTest from "../AccordionTest";
 function Body() {
 	return (
 		<Container fluid className="px-0">
-			<Section className="bg-warning px-0 col d-flex justify-content-between">
+			<Section className=" px-0 col d-flex justify-content-between">
 				<Sidebar />
 				<Content />
 			</Section>
@@ -20,4 +20,5 @@ export default Body;
 
 const Section = styled.section`
 	min-height: calc(100vh - 56px);
+	background: var(--body-bg);
 `;

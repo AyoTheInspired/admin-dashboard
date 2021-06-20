@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Navbar, Nav, Badge } from "react-bootstrap";
+import { Navbar, Nav, Badge, Form, FormControl, Button } from "react-bootstrap";
 import { FaBars, FaTimes, FaSignOutAlt } from "react-icons/fa";
 import { GoSignOut } from "react-icons/go";
 import { navInfo } from "../appData";
@@ -19,13 +19,19 @@ function Navigation() {
 
 	return (
 		<>
-			<Wrap>
+			<Wrap className="w-100">
 				<Navbar expand="lg" className="navbar">
-					{/* <div className="nav__items-wrapper col bg-warning d-flex justify-content-start align-items-center py-2"> */}
 					<div className="nav__logo">
 						<Navbar.Brand>
-							<h3 className="mb-0 logo-text">Dashboard</h3>
+							<Form inline className="nav__form">
+								<FormControl
+									type="text"
+									placeholder="Search Projects..."
+									className="mr-sm-2 nav__form-input"
+								/>
+							</Form>
 						</Navbar.Brand>
+						<div className="mr-auto"></div>
 					</div>
 					<Navbar.Toggle
 						aria-controls="the-nav"
@@ -35,20 +41,21 @@ function Navigation() {
 					</Navbar.Toggle>
 
 					<Navbar.Collapse id="the-nav" className="justify-content-end">
-						<Nav className="align-items-end">
+						<Nav className="">
 							{navInfo.map((info, id) => {
-								const { icon, tip, tag } = info;
+								const { icon, tip, tag, place } = info;
 								return (
 									<Nav.Link
-										data-tip="React-tooltip"
+										data-tip={tip}
 										className="nav__link-icon"
 										key={uid(info)}>
 										<div
 											className={
 												mobileView ? "flexed py-1 px-2 my-1 icon-wrap" : "mx-3"
 											}>
-											<span>{icon}</span>
+											<span className="">{icon}</span>
 											<StyledReactTooltip
+												arrowColor="var(--sidebar-bg)"
 												place="left"
 												type="dark"
 												effect="float"></StyledReactTooltip>
@@ -73,7 +80,6 @@ function Navigation() {
 							</h6>
 						</div>
 					</Navbar.Collapse>
-					{/* </div> */}
 				</Navbar>
 			</Wrap>
 		</>
@@ -89,7 +95,7 @@ const Wrap = styled.div`
 	}
 	& .nav__link-icon {
 		position: relative;
-		color: #aaa !important;
+		color: #888 !important;
 	}
 
 	& h3.logo-text {
@@ -112,15 +118,10 @@ const Wrap = styled.div`
 
 		&:hover,
 		&:hover .icon-badge {
-			color: #fff;
+			color: var(--sidebar-bg);
 			opacity: 1;
 		}
 	}
-
-	/* & .icon-badge {
-		color: #fff !important;
-		opacity: 1;
-	} */
 
 	& .icon-badge {
 		@media (max-width: 768px) {
@@ -132,7 +133,7 @@ const Wrap = styled.div`
 		transition: var(--sht-trans);
 		&:hover,
 		&:hover.icon-badge {
-			color: #fff;
+			color: var(--sidebar-bg);
 		}
 	}
 
@@ -148,6 +149,12 @@ const Wrap = styled.div`
 	& .logout-div {
 		cursor: pointer;
 		border-left: 1px solid var(--bby-blue);
+	}
+
+	& .nav__form,
+	.nav__form-input {
+		border: none !important;
+		box-shadow: none;
 	}
 
 	@media (max-width: 768px) {
@@ -208,5 +215,5 @@ const NavItemsContainer = styled.div`
 `;
 
 const StyledReactTooltip = styled(ReactTooltip)`
-	background: red !important;
+	background: var(--sidebar-bg) !important;
 `;

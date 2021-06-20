@@ -2,6 +2,7 @@
 	--dark-ppl: #0f0326;
 	--light-ppl: #1b0346;
 	--sidebar-bg: #293042;
+	--sidebar-ft: #222a37;
 	--body-bg: #f7f9fc;
 	/* --light-ppl: ##1f618d; */
 	--bby-blue: #92bcea;
@@ -25,4 +26,6 @@
 
 nav {
 	background: var(--light-ppl);
+	background: #ffffff;
+	box-shadow: 0px 1px 15px #777;
 }

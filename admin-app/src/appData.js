@@ -12,6 +12,7 @@ import {
 	FaRegCalendarAlt,
 	FaShareAlt,
 	FaUserFriends,
+	FaBell,
 } from "react-icons/fa";
 import { ImEqualizer2 } from "react-icons/im";
 import {
@@ -20,21 +21,25 @@ import {
 	AiOutlinePieChart,
 	AiOutlineFundProjectionScreen,
 } from "react-icons/ai";
+import { FiCheckCircle } from "react-icons/fi";
 
 export const navInfo = [
 	{
 		icon: <FaSearch />,
 		tip: "Search Dashboard",
+		place: "left",
 		tag: "Search",
 	},
 	{
 		icon: <FaRegBell />,
 		tip: "Notifications",
+		place: "top",
 		tag: "Notifications",
 	},
 	{
 		icon: <FaCommentDots />,
 		tip: "Messages & Chat",
+		place: "right",
 		tag: "Chat",
 	},
 ];
@@ -97,7 +102,6 @@ export const sidebarTopInfo = [
 ];
 
 export const sidebarMidInfo = [
-	{ sidebarName: "Tabs & Components" },
 	{
 		icon: <AiOutlineAppstore />,
 		title: "UI Elements",
@@ -116,6 +120,7 @@ export const sidebarMidInfo = [
 		title: "Icons",
 		badge: "1500+",
 		badgeVariant: "primary",
+		children: ["Feather", "Font Awesome"],
 	},
 	{
 		icon: <FaUserCheck />,
@@ -129,23 +134,38 @@ export const sidebarMidInfo = [
 ];
 
 export const sidebarBottomInfo = [
-	{ sidebarName: "Plugin & Addons" },
+	{
+		icon: <FiCheckCircle />,
+		title: "Form Plugins",
+		dropArrow: true,
+		children: ["Advanced Inputs", "Editors", "Validation", "Wizard"],
+	},
+	{
+		icon: <AiOutlineBars />,
+		title: "Advanced Tables",
+		dropArrow: true,
+		children: ["Pagination", "Row Selection", "Expandable Rows", "Export CSV"],
+	},
 	{
 		icon: <AiOutlinePieChart />,
 		title: "Charts",
+		badge: "New",
+		badgeVariant: "primary",
+		children: ["Charts.js", "ApexCharts"],
+	},
+	{
+		icon: <FaRegBell />,
+		title: "Notifications",
 	},
 	{
 		icon: <FaMapMarkerAlt />,
 		title: "Maps",
+		dropArrow: true,
 		children: ["Google Maps", "Vector Maps"],
 	},
 
 	{
 		icon: <FaRegCalendarAlt />,
 		title: "Calendar",
-	},
-	{
-		icon: <FaShareAlt />,
-		title: "Multi Level",
 	},
 ];
