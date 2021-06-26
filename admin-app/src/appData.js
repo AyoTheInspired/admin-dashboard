@@ -2,17 +2,13 @@ import {
 	FaSearch,
 	FaRegBell,
 	FaCommentDots,
-	FaHome,
 	FaPager,
-	FaUsers,
 	FaBookReader,
 	FaRegHeart,
 	FaUserCheck,
 	FaMapMarkerAlt,
 	FaRegCalendarAlt,
-	FaShareAlt,
 	FaUserFriends,
-	FaBell,
 } from "react-icons/fa";
 import { ImEqualizer2 } from "react-icons/im";
 import {
@@ -21,7 +17,13 @@ import {
 	AiOutlinePieChart,
 	AiOutlineFundProjectionScreen,
 } from "react-icons/ai";
-import { FiCheckCircle } from "react-icons/fi";
+import {
+	FiCheckCircle,
+	FiShoppingCart,
+	FiDollarSign,
+	FiShoppingBag,
+} from "react-icons/fi";
+import { RiPulseLine } from "react-icons/ri";
 
 export const navInfo = [
 	{
@@ -167,5 +169,28 @@ export const sidebarBottomInfo = [
 	{
 		icon: <FaRegCalendarAlt />,
 		title: "Calendar",
+	},
+];
+
+export const overviewInfo = [
+	{
+		icon: <FiShoppingCart />,
+		figure: "2,562",
+		text: "Sales Today",
+	},
+	{
+		icon: <RiPulseLine />,
+		figure: "17,212",
+		text: "Sales Today",
+	},
+	{
+		icon: <FiDollarSign />,
+		figure: "$43,500",
+		text: "Total Earnings",
+	},
+	{
+		icon: <FiShoppingBag />,
+		figure: "50",
+		text: "Pending Orders",
 	},
 ];

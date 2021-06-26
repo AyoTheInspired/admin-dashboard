@@ -2,20 +2,35 @@ import React from "react";
 import { Container, Row } from "react-bootstrap";
 import styled from "styled-components";
 import AccordionTest from "../AccordionTest";
+import { overviewInfo } from "../appData";
 import Navigation from "./Navigation";
 
 function Content() {
 	return (
 		<>
-			<Wrap className="bg-darks col-lg  px-0">
+			<Wrap className="">
 				<Navigation />
 				<Container fluid>
 					<Row>
 						<InnerSection className="col-lg mt-3">
-							<div className="overview__container col-lg-3">
-								<div className="overview__icon"></div>
-								<div className="overview__text"></div>
-							</div>{" "}
+							<div className="section__header d-flex justify-content-between align-items-center py-4">
+								<div className="section__header-left">Welcome, Ayo</div>
+								<div className="section__header-right">Today</div>
+							</div>
+							<div className="overview__wrap col flexed">
+								{overviewInfo.map((info) => {
+									const { icon, figure, text } = info;
+									return (
+										<div className="overview__container bg-success mx-2 py-2 mr-auto col-lg-3 flexed">
+											<span className="overview__icon "> {icon} </span>
+											<div className="overview__detail d-flex flex-column justify-content-between mr-auto">
+												<h5 className="overview__figure mb-0">{figure}</h5>
+												<p className="overview__text mb-0">{text}</p>
+											</div>
+										</div>
+									);
+								})}
+							</div>
 							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum
 							doloribus natus error ipsa dolor tempore ea facilis odit
 							consequuntur. Iste minus ea corrupti dolores amet esse, debitis
@@ -50,10 +65,10 @@ function Content() {
 export default Content;
 
 const Wrap = styled.section`
-	/* width: 80.5%;
-	@media (max-width: 768px) {
-		width: 71%;
-	} */
+	/* width: 80.5%; */
+	@media (max-width: 425px) {
+		width: 30% !important;
+	}
 `;
 
 const InnerSection = styled.section``;

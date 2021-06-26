@@ -9,7 +9,7 @@ function Body() {
 	return (
 		<Container fluid className="px-0">
 			<Section className=" px-0 col d-flex justify-content-between">
-				<Sidebar />
+				{/* <Sidebar /> */}
 				<Content />
 			</Section>
 		</Container>

@@ -12,7 +12,7 @@ import { uid } from "react-uid";
 function Sidebar() {
 	return (
 		<>
-			<Wrap className="px-0 pb-0 d-flex flex-column justify-content-between">
+			<Wrap className="px-0 pb-0 col-md-4 col-sm d-flex flex-column justify-content-between">
 				<div className="sidebar__header my-4 pt-1 pb-2 px-4 mx-auto flexed">
 					<span className="sidebar__header-icon mr-2 text-primary">
 						<FiBox />
@@ -24,10 +24,16 @@ function Sidebar() {
 				<SidebarBottom />
 				<Container fluid className="user__wrap mt-4 px-0 py-2 d-lg-block">
 					<div className="user__container flexed">
-						<div className="user__img-div col-5 pl-2 pr-1 flexed">
-							<img src="./user.jpg" alt="" className="ml-auto w-50" />
+						<div className="user__img-div  pl-2 pr-1 flexed">
+							<img
+								src="./user.jpg"
+								alt=""
+								className="ml-auto mx-2"
+								height="40"
+								width="40"
+							/>
 						</div>
-						<div className="user__details py-2 px-0 col-7 text-white mr-auto ml-2">
+						<div className="user__details py-2 px-0  text-white mr-auto">
 							<h5 className="user__name mb-1">Ayo Abimbola</h5>
 							<h6 className="mb-0 user__status">
 								<span className="status__circle mr-2">
@@ -35,7 +41,6 @@ function Sidebar() {
 								</span>
 								Online
 							</h6>
-							<div className=""></div>
 						</div>
 					</div>
 				</Container>
@@ -50,9 +55,9 @@ const Wrap = styled.div`
 	position: relative;
 	background: var(--sidebar-bg);
 	color: var(--pale-2);
-	width: 19.5% !important;
-	@media (max-width: 768px) {
-		width: 28% !important;
+	max-width: 19.5% !important;
+	@media (max-width: 425px) {
+		max-width: 60% !important;
 	}
 `;
 

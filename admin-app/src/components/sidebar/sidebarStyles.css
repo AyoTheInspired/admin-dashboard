@@ -32,15 +32,13 @@
 
 .user__img-div img {
 	object-fit: cover;
-	/* height: 50px; */
-	width: 80%;
 	border: 1px solid #fff;
 	border-radius: 50%;
 }
 
 .sidebar__header {
 	border-radius: 5px;
-	box-shadow: 0px 0px 5px #000000;
+	box-shadow: 0px 0px 2px #000000;
 }
 
 .sidebar__header-icon {

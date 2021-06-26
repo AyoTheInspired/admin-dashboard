@@ -1,5 +1,12 @@
 import React, { useState } from "react";
-import { Navbar, Nav, Badge, Form, FormControl, Button } from "react-bootstrap";
+import {
+	Navbar,
+	Nav,
+	Badge,
+	Form,
+	FormControl,
+	Container,
+} from "react-bootstrap";
 import { FaBars, FaTimes, FaSignOutAlt } from "react-icons/fa";
 import { GoSignOut } from "react-icons/go";
 import { navInfo } from "../appData";
@@ -19,7 +26,7 @@ function Navigation() {
 
 	return (
 		<>
-			<Wrap className="w-100">
+			<Wrap className="">
 				<Navbar expand="lg" className="navbar">
 					<div className="nav__logo">
 						<Navbar.Brand>
