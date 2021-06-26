@@ -183,7 +183,7 @@ export const overviewInfo = [
 		icon: <RiPulseLine />,
 		iconColor: "text-warning",
 		figure: "17,212",
-		text: "Sales Today",
+		text: "Total Clients",
 	},
 	{
 		icon: <FiDollarSign />,

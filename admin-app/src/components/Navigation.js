@@ -26,7 +26,8 @@ function Navigation() {
 
 	return (
 		<>
-			<Wrap className="">
+			{/* <Container fluid className="px-0 "> */}
+			<Wrap>
 				<Navbar expand="lg" className="navbar">
 					<div className="nav__logo">
 						<Navbar.Brand>
@@ -89,6 +90,7 @@ function Navigation() {
 					</Navbar.Collapse>
 				</Navbar>
 			</Wrap>
+			{/* </Container> */}
 		</>
 	);
 }
@@ -96,6 +98,7 @@ function Navigation() {
 export default Navigation;
 
 const Wrap = styled.div`
+	width: 100% !important;
 	& .nav-toggler {
 		font-size: 23px;
 		color: #fff;
@@ -215,11 +218,7 @@ const Wrap = styled.div`
 	}
 `;
 
-const NavItemsContainer = styled.div`
-	// 	/* disp */
-	// 	display: flex;
-	// 	flex-direction: column !important;
-`;
+const NavItemsContainer = styled.div``;
 
 const StyledReactTooltip = styled(ReactTooltip)`
 	background: var(--sidebar-bg) !important;

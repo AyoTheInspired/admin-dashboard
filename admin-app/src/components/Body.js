@@ -8,7 +8,7 @@ import AccordionTest from "../AccordionTest";
 function Body() {
 	return (
 		<Container fluid className="px-0">
-			<Section className=" px-0 col d-flex justify-content-between">
+			<Section className="d-flex justify-content-between">
 				{/* <Sidebar /> */}
 				<Content />
 			</Section>
