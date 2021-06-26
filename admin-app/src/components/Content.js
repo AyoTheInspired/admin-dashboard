@@ -4,6 +4,7 @@ import styled from "styled-components";
 import AccordionTest from "../AccordionTest";
 import { overviewInfo } from "../appData";
 import Navigation from "./Navigation";
+import "./content.css";
 
 function Content() {
 	return (
@@ -13,18 +14,25 @@ function Content() {
 				<Container fluid>
 					<Row>
 						<InnerSection className="col-lg mt-3">
-							<div className="section__header d-flex justify-content-between align-items-center py-4">
-								<div className="section__header-left">Welcome, Ayo</div>
+							<div className="section__header col d-flex justify-content-between align-items-center py-4">
+								<div className="section__header-left">
+									<h4 className=" mb-0 header__left-text">
+										Welcome back, Ayo!
+									</h4>
+								</div>
 								<div className="section__header-right">Today</div>
 							</div>
-							<div className="overview__wrap col flexed">
+							<div className="overview__wrap my-2 flexed flex-wrap mx-auto">
 								{overviewInfo.map((info) => {
-									const { icon, figure, text } = info;
+									const { icon, iconColor, figure, text } = info;
 									return (
-										<div className="overview__container bg-success mx-2 py-2 mr-auto col-lg-3 flexed">
-											<span className="overview__icon "> {icon} </span>
+										<div className="overview__container bg-success mx-2 py-2 my-2 col-sm-10 col-md-5 col-lg-3 flexed">
+											<span className={`${iconColor} overview__icon`}>
+												{" "}
+												{icon}{" "}
+											</span>
 											<div className="overview__detail d-flex flex-column justify-content-between mr-auto">
-												<h5 className="overview__figure mb-0">{figure}</h5>
+												<h5 className="overview__figure mb-2">{figure}</h5>
 												<p className="overview__text mb-0">{text}</p>
 											</div>
 										</div>

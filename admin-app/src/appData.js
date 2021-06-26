@@ -175,21 +175,25 @@ export const sidebarBottomInfo = [
 export const overviewInfo = [
 	{
 		icon: <FiShoppingCart />,
+		iconColor: "text-primary",
 		figure: "2,562",
 		text: "Sales Today",
 	},
 	{
 		icon: <RiPulseLine />,
+		iconColor: "text-warning",
 		figure: "17,212",
 		text: "Sales Today",
 	},
 	{
 		icon: <FiDollarSign />,
+		iconColor: "text-success",
 		figure: "$43,500",
 		text: "Total Earnings",
 	},
 	{
 		icon: <FiShoppingBag />,
+		iconColor: "text-danger",
 		figure: "50",
 		text: "Pending Orders",
 	},
