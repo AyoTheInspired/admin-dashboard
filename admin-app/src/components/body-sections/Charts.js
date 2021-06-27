@@ -49,11 +49,11 @@ function Charts() {
 	// this.state =
 
 	return (
-		<section className="d-flex justify-content-between align-items-center flex-wrap col-lg my-2 px-2">
+		<section className="d-flex justify-content-between align-items-center flex-wrap col-lg my-2 p-2">
 			<Graph className="flexed app col-lg-7 col-md-10 col-sm-10 mr-4">
 				<div className="row">
 					<div className="mixed-chart">
-						<div className="graph__title d-flex justify-content-between align-items-center">
+						<div className="graph__title d-flex justify-content-between align-items-center pt-2">
 							<h6 className="mb-0">Total Revenue</h6>
 							<Badge className="bg-primary text-white p-1">Monthly</Badge>
 						</div>
@@ -67,14 +67,14 @@ function Charts() {
 				</div>
 			</Graph>
 			<DailyFeed className="feed__wrapper col-lg col-md-10 col-sm-10 d-flex flex-column p-3">
-				<div className="d-flex justify-content-between align-items-center">
+				<div className="d-flex justify-content-between align-items-center my-3 py-2">
 					<h5 className="feed__title mb-0">Daily Feed</h5>
 					<Badge className="bg-primary text-white p-1">Today</Badge>
 				</div>
 				{dailyFeedInfo.map((feed) => {
 					const { imgSrc, msg, timeBelow, detail, timeBadge } = feed;
 					return (
-						<div className="feed__container d-flex justify-content-center my-2 py-3 px-2">
+						<div className="feed__container d-flex justify-content-center my-2 py-2 px-2">
 							<div className="feed__image-container">
 								<img
 									src={imgSrc}
@@ -97,11 +97,9 @@ function Charts() {
 						</div>
 					);
 				})}
-				{/* <div className="feed__button"> */}
 				<btn className="mb-0 btn w-100 btn-primary text-center text-white">
 					Load More
 				</btn>
-				{/* </div> */}
 			</DailyFeed>
 		</section>
 	);
@@ -111,7 +109,8 @@ export default Charts;
 
 const Graph = styled.div`
 	background: #fff;
-	padding: 25px;
+	min-height: 500px;
+	max-height: 500px;
 `;
 
 const DailyFeed = styled.div`

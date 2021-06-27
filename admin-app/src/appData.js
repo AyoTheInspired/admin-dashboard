@@ -201,6 +201,12 @@ export const overviewInfo = [
 
 export const dailyFeedInfo = [
 	{
+		imgSrc: "/user.jpg",
+		msg: "Ayo Abimbola started following Matthew Kings",
+		timeBelow: "Today - 2:17 am",
+		timeBadge: "25m ago",
+	},
+	{
 		imgSrc: "/ashley.jpg",
 		msg: "Ashley Briggs started following Stacie Hall",
 		timeBelow: "Today - 7:51 pm",
