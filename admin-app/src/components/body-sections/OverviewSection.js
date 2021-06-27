@@ -1,22 +1,25 @@
 import React from "react";
-import {
-	Container,
-	Row,
-	Dropdown,
-	DropdownButton,
-	Card,
-} from "react-bootstrap";
-
+import { Dropdown, DropdownButton } from "react-bootstrap";
 import { FiFilter, FiRefreshCw } from "react-icons/fi";
 import styled from "styled-components";
 import { overviewInfo } from "../../appData";
 
 function OverviewSection() {
 	return (
-		<Wrap className="col-lg my-2 px-3">
-			<div className="section__header col d-flex justify-content-between align-items-center py-4">
+		<Wrap className="col-lg my-2 px-0">
+			<div className="section__header col d-flex justify-content-between align-items-center pt-4 my-3">
 				<div className="section__header-left">
 					<h4 className=" mb-0 header__left-text">Welcome back, Ayo!</h4>
+				</div>
+				<div className="flexed">
+					<h5 className="header__mid-text mb-0 mr-2 bg-dark text-white p-2">
+						Project was inspired by
+					</h5>
+					<a
+						href="https://appstack-react.bootlab.io/dashboard/default"
+						className="inspiration__link text-slant">
+						This Bootstrap Template
+					</a>
 				</div>
 				<div className="section__header-right flexed">
 					<DropdownButton
@@ -62,3 +65,5 @@ export default OverviewSection;
 const Wrap = styled.section`
 	display: block;
 `;
+
+// <img src="/static/media/avatar.d7185574.jpg" width="36" height="36" class="rounded-circle mr-2" alt="Chris Wood"></img>

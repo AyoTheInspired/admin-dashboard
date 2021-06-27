@@ -188,7 +188,7 @@ export const overviewInfo = [
 	{
 		icon: <FiDollarSign />,
 		iconColor: "text-success",
-		figure: "$43,500",
+		figure: "$ 43,500",
 		text: "Total Earnings",
 	},
 	{
@@ -196,5 +196,28 @@ export const overviewInfo = [
 		iconColor: "text-danger",
 		figure: "50",
 		text: "Pending Orders",
+	},
+];
+
+export const dailyFeedInfo = [
+	{
+		imgSrc: "/ashley.jpg",
+		msg: "Ashley Briggs started following Stacie Hall",
+		timeBelow: "Today - 7:51 pm",
+		timeBadge: "5m ago",
+	},
+	{
+		imgSrc: "./chris.jpg",
+		msg: "Chris Wood posted something on Stacie Hall's timeline",
+		timeBelow: "Today - 7:21 pm",
+		detail:
+			"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet, voluptas facere? Sequi minus aut autem repellendus?",
+		timeBadge: "30m ago",
+	},
+	{
+		imgSrc: "./stacie.jpg",
+		msg: "Stacie Hall posted a new blog",
+		timeBelow: "Today - 6:35 pm",
+		timeBadge: "1h ago",
 	},
 ];

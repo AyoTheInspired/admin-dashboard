@@ -14,6 +14,13 @@
 		"Helvetica Neue", Arial, sans-serif;
 }
 
+.header__mid-text {
+	font-size: 15px;
+	font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI",
+		"Helvetica Neue", Arial, sans-serif;
+	font-style: bold;
+}
+
 .header__right-icon {
 	border-radius: 5px;
 }
@@ -21,10 +28,53 @@
 .overview__container {
 	background: #fff;
 	border-radius: 5px;
-	box-shadow: 0px 0px 1px #131313cc;
 }
 
 .overview__icon {
 	font-size: 35px;
 	margin-right: 15px;
+}
+
+.overview__figure {
+	font-size: 21px;
+	font-style: bold;
+	font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI",
+		"Helvetica Neue", Arial, sans-serif;
+}
+
+.overview__text,
+.feed__msg {
+	font-size: 14px;
+	font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI",
+		"Helvetica Neue", Arial, sans-serif;
+}
+
+/* DAILY FEED SECTION */
+
+.feed__title {
+	font-size: 16px;
+	font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI",
+		"Helvetica Neue", Arial, sans-serif;
+}
+
+.feed__container {
+	border-bottom: 1px solid #eee;
+}
+
+.feed__time-below {
+	font-size: 11.2px;
+	font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI",
+		"Helvetica Neue", Arial, sans-serif;
+	display: block;
+}
+
+.feed__detail {
+	font-size: 12px;
+	font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI",
+		"Helvetica Neue", Arial, sans-serif;
+	border: 1px solid gray;
+}
+
+.feed__image {
+	border-radius: 50%;
 }
