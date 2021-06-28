@@ -1,70 +1,97 @@
 import React, { useState } from "react";
 import Chart from "react-apexcharts";
+import { Bar } from "react-chartjs-2";
 import styled from "styled-components";
 import { Badge } from "react-bootstrap";
 import { dailyFeedInfo } from "../../appData";
 import "../content.css";
 
 function ChartFeed() {
-	const [chartData, setChartData] = useState({
-		options: {
-			chart: {
-				toolbar: {
-					show: false,
-				},
-				stroke: {
-					width: 0.5,
-				},
-				id: "basic-bar",
-			},
-			xaxis: {
-				categories: [
-					"Jan",
-					"Feb",
-					"Mar",
-					"Apr",
-					"May",
-					"June",
-					"July",
-					"Aug",
-					"Sept",
-					"Oct",
-					"Nov",
-					"Dec",
-				],
-			},
-		},
-		series: [
-			{
-				name: "series-1",
-				data: [30, 40, 45, 50, 49, 60, 70, 91],
-			},
-			{
-				name: "series-2",
-				data: [80, 49, 15, 57, 33, 60, 90, 94],
-			},
-		],
-	});
+	// const [chartData, setChartData] = useState({
+	// 	options: {
+	// 		chart: {
+	// 			toolbar: {
+	// 				show: false,
+	// 			},
+	// 			stroke: {
+	// 				width: 0.5,
+	// 			},
+	// 			id: "basic-bar",
+	// 		},
+	// 		xaxis: {
+	// 			categories: [
+	// 				"Jan",
+	// 				"Feb",
+	// 				"Mar",
+	// 				"Apr",
+	// 				"May",
+	// 				"June",
+	// 				"July",
+	// 				"Aug",
+	// 				"Sept",
+	// 				"Oct",
+	// 				"Nov",
+	// 				"Dec",
+	// 			],
+	// 		},
+	// 	},
+	// 	series: [
+	// 		{
+	// 			name: "series-1",
+	// 			data: [30, 40, 45, 50, 49, 60, 70, 91],
+	// 		},
+	// 		{
+	// 			name: "series-2",
+	// 			data: [80, 49, 15, 57, 33, 60, 90, 94],
+	// 		},
+	// 	],
+	// });
 
 	return (
 		<section className="d-flex justify-content-between align-items-center flex-wrap col-lg my-2 p-2">
-			<Graph className="flexed app col-lg-7 col-md-10 col-sm-10 mr-4">
-				<div className="row">
-					<div className="mixed-chart">
-						<div className="graph__title d-flex justify-content-between align-items-center pt-2">
-							<h6 className="mb-0">Total Revenue</h6>
-							<Badge className="bg-primary text-white p-1">Monthly</Badge>
-						</div>
-						<Chart
-							options={chartData.options}
-							series={chartData.series}
-							type="line"
-							width="700"
-						/>
-					</div>
-				</div>
+			<Graph className="flexed app col-lg-7 col-md-5 col-sm-10 mr-4">
+				<Bar
+					height={400}
+					width={600}
+					data={{
+						labels: [
+							"Jan",
+							"Feb",
+							"Mar",
+							"Apr",
+							"May",
+							"June",
+							"July",
+							"Aug",
+							"Sept",
+							"Oct",
+							"Nov",
+							"Dec",
+						],
+
+						datasets: [
+							{
+								label: "Sales in 2020",
+								data: [40, 19, 43, 57, 29, 80, 90, 44, 67, 32, 75, 89],
+								backgroundColor: "#3B82EC",
+								borderWidth: 1,
+							},
+
+							{
+								label: "Sales in 2021",
+								data: [55, 30, 29, 105, 66, 48, 39, 89, 34, 67, 43, 75],
+								backgroundColor: "#f0ad4e",
+							},
+						],
+					}}
+					options={
+						{
+							// maintainAspectRatio: false,
+						}
+					}
+				/>
 			</Graph>
-			<DailyFeed className="feed__wrapper col-lg col-md-10 col-sm-10 d-flex flex-column p-3">
+			<DailyFeed className="feed__wrapper col-lg col-md-5 col-sm-10 d-flex flex-column p-3">
 				<div className="d-flex justify-content-between align-items-center my-3 py-2">
 					<h5 className="feed__title mb-0">Daily Feed</h5>
 					<Badge className="bg-primary text-white p-1">Today</Badge>

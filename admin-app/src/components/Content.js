@@ -5,6 +5,8 @@ import Navigation from "./Navigation";
 import "./content.css";
 import OverviewSection from "./body-sections/OverviewSection";
 import ChartFeed from "./body-sections/ChartFeed";
+import TrioCharts from "./body-sections/TrioCharts";
+import Tooltips from "./Tooltips";
 
 function Content() {
 	return (
@@ -12,15 +14,23 @@ function Content() {
 			<Wrapper className="col-lg px-0">
 				<Navigation />
 				<Container fluid>
-					{/* <Row> */}
 					<OverviewSection />
 					<ChartFeed />
-					{/* </Row> */}
+					<TrioCharts />
+					<Tooltips />
 				</Container>
 			</Wrapper>
 		</>
 	);
 }
+
+// --primary: #3B82EC;
+//     --secondary: #495057;
+//     --success: #4BBF73;
+//     --info: #1F9BCF;
+//     --warning: #f0ad4e;
+//     --danger: #d9534f;
+//     --light: #f8f9fa;
 
 export default Content;
 

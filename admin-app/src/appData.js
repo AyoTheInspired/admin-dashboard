@@ -227,3 +227,51 @@ export const dailyFeedInfo = [
 		timeBadge: "1h ago",
 	},
 ];
+
+export const weeklySalesData = [
+	{
+		statusColor: "text-primary",
+		source: "Direct",
+		revenue: "$ 2602",
+		value: "+43%",
+	},
+	{
+		statusColor: "text-warning",
+		source: "Affiliate",
+		revenue: "$ 1253",
+		value: "+13%",
+	},
+	{
+		statusColor: "text-danger",
+		source: "Email",
+		revenue: "$ 541",
+		value: "+24%",
+	},
+	{
+		statusColor: "text-dark",
+		source: "Other",
+		revenue: "$ 1465",
+		value: "+11%",
+	},
+];
+
+export const scheduleInfo = [
+	{
+		scheduleTitle: "Chat with Carl and Ashley",
+		scheduleTime: "30m ago",
+		scheduleDetail:
+			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ab vitae quia, beatae harum corporis odio qui in autem inventore.",
+	},
+	{
+		scheduleTitle: "The Big Launch",
+		scheduleTime: "2h ago",
+		scheduleDetail:
+			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ab vitae quia, beatae harum corporis odio qui in autem inventore.",
+	},
+	{
+		scheduleTitle: "Coffee Break",
+		scheduleTime: "3h ago",
+		scheduleDetail:
+			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ab vitae quia, beatae harum corporis odio qui in autem inventore.",
+	},
+];
