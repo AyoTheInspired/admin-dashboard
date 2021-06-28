@@ -5,7 +5,7 @@ import { Badge } from "react-bootstrap";
 import { dailyFeedInfo } from "../../appData";
 import "../content.css";
 
-function Charts() {
+function ChartFeed() {
 	const [chartData, setChartData] = useState({
 		options: {
 			chart: {
@@ -45,8 +45,6 @@ function Charts() {
 			},
 		],
 	});
-
-	// this.state =
 
 	return (
 		<section className="d-flex justify-content-between align-items-center flex-wrap col-lg my-2 p-2">
@@ -105,7 +103,7 @@ function Charts() {
 	);
 }
 
-export default Charts;
+export default ChartFeed;
 
 const Graph = styled.div`
 	background: #fff;

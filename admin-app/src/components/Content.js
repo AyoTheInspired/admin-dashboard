@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Navigation from "./Navigation";
 import "./content.css";
 import OverviewSection from "./body-sections/OverviewSection";
-import Charts from "./body-sections/Charts";
+import ChartFeed from "./body-sections/ChartFeed";
 
 function Content() {
 	return (
@@ -14,7 +14,7 @@ function Content() {
 				<Container fluid>
 					{/* <Row> */}
 					<OverviewSection />
-					<Charts />
+					<ChartFeed />
 					{/* </Row> */}
 				</Container>
 			</Wrapper>
