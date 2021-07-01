@@ -8,10 +8,10 @@ function OverviewSection() {
 	return (
 		<Wrap className="col-lg my-2 px-0">
 			<div className="section__header col d-flex flex-wrap justify-content-between align-items-center pt-4 my-3">
-				<div className="section__header-left">
+				<div className="section__header-left mx-auto mt-2">
 					<h4 className=" mb-0 header__left-text">Welcome back, Ayo!</h4>
 				</div>
-				<div className="flexed">
+				<div className="flexed mx-auto mt-2">
 					<h5 className="header__mid-text mb-0 mr-2">
 						Project was inspired by
 					</h5>

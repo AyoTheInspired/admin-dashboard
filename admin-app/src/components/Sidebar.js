@@ -55,6 +55,7 @@ const Wrap = styled.div`
 	background: var(--sidebar-bg);
 	color: var(--pale-2);
 	max-width: 250px !important;
+	min-width: 250px !important;
 	@media (max-width: 425px) {
 		max-width: 60% !important;
 	}

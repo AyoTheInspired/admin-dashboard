@@ -17,7 +17,7 @@ function Content() {
 					<OverviewSection />
 					<ChartFeed />
 					<TrioCharts />
-					<Tooltips />
+					{/* <Tooltips /> */}
 				</Container>
 			</Wrapper>
 		</>

@@ -7,8 +7,7 @@ import {
 	FormControl,
 	Container,
 } from "react-bootstrap";
-import { FaBars, FaTimes, FaSignOutAlt } from "react-icons/fa";
-import { GoSignOut } from "react-icons/go";
+import { FaBars, FaSignOutAlt } from "react-icons/fa";
 import { navInfo } from "../appData";
 import { uid } from "react-uid";
 import styled from "styled-components";
