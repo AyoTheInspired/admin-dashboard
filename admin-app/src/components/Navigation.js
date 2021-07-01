@@ -26,7 +26,6 @@ function Navigation() {
 
 	return (
 		<>
-			{/* <Container fluid className="px-0 "> */}
 			<Wrap>
 				<Navbar expand="lg" className="navbar">
 					<div className="nav__logo">
@@ -93,7 +92,6 @@ function Navigation() {
 					</Navbar.Collapse>
 				</Navbar>
 			</Wrap>
-			{/* </Container> */}
 		</>
 	);
 }
