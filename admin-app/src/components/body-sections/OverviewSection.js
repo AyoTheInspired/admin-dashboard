@@ -7,21 +7,21 @@ import { overviewInfo } from "../../appData";
 function OverviewSection() {
 	return (
 		<Wrap className="col-lg my-2 px-0">
-			<div className="section__header col d-flex justify-content-between align-items-center pt-4 my-3">
+			<div className="section__header col d-flex flex-wrap justify-content-between align-items-center pt-4 my-3">
 				<div className="section__header-left">
 					<h4 className=" mb-0 header__left-text">Welcome back, Ayo!</h4>
 				</div>
 				<div className="flexed">
-					<h5 className="header__mid-text mb-0 mr-2 bg-dark text-white p-2">
+					<h5 className="header__mid-text mb-0 mr-2">
 						Project was inspired by
 					</h5>
 					<a
 						href="https://appstack-react.bootlab.io/dashboard/default"
-						className="inspiration__link text-slant">
-						This Bootstrap Template
+						className="inspiration__link text-slant bg-dark text-white p-2">
+						This Template
 					</a>
 				</div>
-				<div className="section__header-right flexed">
+				<div className="section__header-right flexed mx-auto mt-2">
 					<DropdownButton
 						id="dropdown-basic-button"
 						title="Today"

@@ -1,16 +1,21 @@
 import React from "react";
-import Navigation from "./components/Navigation";
+import styled from "styled-components";
 import Body from "./components/Body";
-import Footer from "./components/Footer";
-import Tooltips from "./components/Tooltips";
-import ReactTooltip from "react-tooltip";
+// import Navigation from "./components/Navigation";
+// import Footer from "./components/Footer";
+// import Tooltips from "./components/Tooltips";
+// import ReactTooltip from "react-tooltip";
+// import Sidebar from "./components/Sidebar";
 
 function Home() {
 	return (
-		<div>
+		<Wrap>
+			{/* <Sidebar /> */}
 			<Body />
-		</div>
+		</Wrap>
 	);
 }
 
 export default Home;
+
+const Wrap = styled.div``;

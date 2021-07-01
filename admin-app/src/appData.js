@@ -275,3 +275,14 @@ export const scheduleInfo = [
 			"Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ab vitae quia, beatae harum corporis odio qui in autem inventore.",
 	},
 ];
+
+export const projectsInfo = [
+	{
+		title: "Project Apollo",
+		startDate: "01 / 01 / 2018",
+		endDate: "31 / 06 / 2018",
+		status: "Done",
+		statusColor: "success",
+		assignee: "Carl Jenkins",
+	},
+];

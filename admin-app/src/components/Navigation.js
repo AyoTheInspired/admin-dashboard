@@ -31,22 +31,25 @@ function Navigation() {
 				<Navbar expand="lg" className="navbar">
 					<div className="nav__logo">
 						<Navbar.Brand>
-							<Form inline className="nav__form">
-								<FormControl
-									type="text"
-									placeholder="Search Projects..."
-									className="mr-sm-2 nav__form-input"
-								/>
-							</Form>
+							<div className="flexed">
+								<FaBars className="sidebar__toggle mr-2" />
+								<Form inline className="nav__form">
+									<FormControl
+										type="text"
+										placeholder="Search Projects..."
+										className="mr-sm-2 nav__form-input"
+									/>
+								</Form>
+							</div>
 						</Navbar.Brand>
 						<div className="mr-auto"></div>
 					</div>
-					<Navbar.Toggle
+					{/* <Navbar.Toggle
 						aria-controls="the-nav"
 						className="nav-toggler"
 						onClick={() => setBurgerClicked(!burgerClicked)}>
 						{burgerClicked ? <FaTimes /> : <FaBars />}
-					</Navbar.Toggle>
+					</Navbar.Toggle> */}
 
 					<Navbar.Collapse id="the-nav" className="justify-content-end">
 						<Nav className="">
@@ -98,6 +101,12 @@ function Navigation() {
 export default Navigation;
 
 const Wrap = styled.div`
+	& .sidebar__toggle {
+		font-size: 25px;
+		cursor: pointer;
+		color: #3b82ec;
+	}
+
 	width: 100% !important;
 	& .nav-toggler {
 		font-size: 23px;
@@ -124,7 +133,6 @@ const Wrap = styled.div`
 	& .logout-div h6 {
 		transition: var(--sht-trans);
 		color: #aaa;
-		/* opacity: 0.5; */
 
 		&:hover,
 		&:hover .icon-badge {
