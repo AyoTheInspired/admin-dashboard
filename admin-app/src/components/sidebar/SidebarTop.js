@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { sidebarTopInfo } from "../../appData";
 import "./sidebarStyles.css";
 import { Badge, Accordion, Card } from "react-bootstrap";
-import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
+import { MdKeyboardArrowDown } from "react-icons/md";
 import { uid } from "react-uid";
 
 function SidebarTop() {
@@ -20,6 +20,7 @@ function SidebarTop() {
 							<>
 								<Accordion.Toggle
 									as={Card.Header}
+									key={uid(title)}
 									eventKey={title}
 									className="sidebar-toggle d-flex justify-content-between align-items-center px-0 py-1">
 									<div className="sidebar__item-a">

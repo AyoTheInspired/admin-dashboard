@@ -1,12 +1,13 @@
-import React from "react";
-import { Container, Row } from "react-bootstrap";
+import React, { useContext } from "react";
+import { Container } from "react-bootstrap";
 import styled from "styled-components";
 import Navigation from "./Navigation";
 import "./content.css";
 import OverviewSection from "./body-sections/OverviewSection";
 import ChartFeed from "./body-sections/ChartFeed";
 import TrioCharts from "./body-sections/TrioCharts";
-import Tooltips from "./Tooltips";
+import ProjectsTable from "./body-sections/ProjectsTable";
+import Footer from "./Footer";
 
 function Content() {
 	return (
@@ -17,7 +18,8 @@ function Content() {
 					<OverviewSection />
 					<ChartFeed />
 					<TrioCharts />
-					{/* <Tooltips /> */}
+					<ProjectsTable />
+					<Footer />
 				</Container>
 			</Wrapper>
 		</>

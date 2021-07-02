@@ -1,14 +1,16 @@
-// import logo from "./logo.svg";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { SidebarProvider } from "./components/SidebarContext";
 
 import Home from "./Home";
 
 function App() {
 	return (
-		<div className="App">
-			<Home />
-		</div>
+		<SidebarProvider>
+			<div className="App">
+				<Home />
+			</div>
+		</SidebarProvider>
 	);
 }
 

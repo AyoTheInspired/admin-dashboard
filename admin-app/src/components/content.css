@@ -129,7 +129,12 @@
 }
 
 .schedule__left,
-.schedule__detail {
+.schedule__detail,
+.projects__table-title,
+.project__title,
+.project__assignee,
+.project__startDate,
+.project__endDate {
 	font-size: 14px;
 	color: #495057;
 	font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -141,4 +146,11 @@
 	color: #737d85;
 	font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI",
 		"Helvetica Neue", Arial, sans-serif;
+}
+
+/* FOR LATEST PROJECTS */
+
+.project__table-title {
+	font-style: normal;
+	font-size: 50px;
 }

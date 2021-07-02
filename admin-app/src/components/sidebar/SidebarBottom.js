@@ -2,10 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { sidebarBottomInfo } from "../../appData";
 import "./sidebarStyles.css";
-import { Badge, Dropdown, Accordion, Card } from "react-bootstrap";
+import { Badge, Accordion, Card } from "react-bootstrap";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { uid } from "react-uid";
-import { FaHome } from "react-icons/fa";
 
 function SidebarBottom() {
 	return (
@@ -22,6 +21,7 @@ function SidebarBottom() {
 								<Accordion.Toggle
 									as={Card.Header}
 									eventKey={title}
+									key={uid(title)}
 									className="sidebar-toggle d-flex justify-content-between align-items-center px-0 py-1">
 									<div className="sidebar__item-a">
 										<span className="sidebar__title-icon mr-2">{icon}</span>

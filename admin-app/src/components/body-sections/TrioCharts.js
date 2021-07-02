@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { Doughnut } from "react-chartjs-2";
 import { Table } from "react-bootstrap";
@@ -46,10 +46,10 @@ function TrioCharts() {
 							{weeklySalesData.map((sale) => {
 								const { statusColor, source, revenue, value } = sale;
 								return (
-									<tr className="sale__wrap ">
+									<tr className="sale__wrap">
 										<td className="sale__source ">
 											<span
-												className={`${statusColor} sale__status inline mr-1 pl-0 mb-1`}>
+												className={`${statusColor} sale__status inline mr-2 ml-0 mb-2`}>
 												<GrStatusGoodSmall />
 											</span>
 											{source}

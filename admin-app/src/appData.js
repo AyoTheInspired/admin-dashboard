@@ -244,7 +244,7 @@ export const weeklySalesData = [
 	{
 		statusColor: "text-danger",
 		source: "Email",
-		revenue: "$ 541",
+		revenue: "$ 5416",
 		value: "+24%",
 	},
 	{
@@ -284,5 +284,37 @@ export const projectsInfo = [
 		status: "Done",
 		statusColor: "success",
 		assignee: "Carl Jenkins",
+	},
+	{
+		title: "Project Fireball",
+		startDate: "01 / 01 / 2018",
+		endDate: "31 / 06 / 2018",
+		status: "Cancelled",
+		statusColor: "danger",
+		assignee: "Bertha Martin",
+	},
+	{
+		title: "Project Hades",
+		startDate: "01 / 01 / 2018",
+		endDate: "31 / 06 / 2018",
+		status: "Done",
+		statusColor: "success",
+		assignee: "Stacie Hall",
+	},
+	{
+		title: "Project Nitro",
+		startDate: "01 / 01 / 2018",
+		endDate: "31 / 06 / 2018",
+		status: "In progress",
+		statusColor: "warning",
+		assignee: "Carl Jenkins",
+	},
+	{
+		title: "Project Phoenix",
+		startDate: "01 / 01 / 2018",
+		endDate: "31 / 06 / 2018",
+		status: "Done",
+		statusColor: "success",
+		assignee: "Bertha Martin",
 	},
 ];

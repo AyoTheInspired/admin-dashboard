@@ -1,21 +1,16 @@
-import React, { useState } from "react";
-import {
-	Navbar,
-	Nav,
-	Badge,
-	Form,
-	FormControl,
-	Container,
-} from "react-bootstrap";
-import { FaBars, FaSignOutAlt } from "react-icons/fa";
+import React, { useState, useContext } from "react";
+import { Navbar, Nav, Badge, Form, FormControl } from "react-bootstrap";
+import { FaBars, FaSignOutAlt, FaTimes } from "react-icons/fa";
 import { navInfo } from "../appData";
 import { uid } from "react-uid";
 import styled from "styled-components";
 import ReactTooltip from "react-tooltip";
+import { SidebarContext } from "./SidebarContext";
 
 function Navigation() {
 	const [mobileView, setMobileView] = useState(false);
-	const [burgerClicked, setBurgerClicked] = useState(false);
+	const [showSidebar, setShowSidebar] = useContext(SidebarContext);
+	// const [burgerClicked, setBurgerClicked] = useState(false);
 
 	window.addEventListener("resize", function () {
 		if (window.innerWidth <= 768) {
@@ -30,7 +25,18 @@ function Navigation() {
 					<div className="nav__logo">
 						<Navbar.Brand>
 							<div className="flexed">
-								<FaBars className="sidebar__toggle mr-2" />
+								{showSidebar ? (
+									<FaTimes
+										onClick={() => setShowSidebar(!showSidebar)}
+										className="sidebar__toggle mr-2"
+									/>
+								) : (
+									<FaBars
+										onClick={() => setShowSidebar(!showSidebar)}
+										className="sidebar__toggle mr-2"
+									/>
+								)}
+
 								<Form inline className="nav__form">
 									<FormControl
 										type="text"
@@ -52,7 +58,7 @@ function Navigation() {
 					<Navbar.Collapse id="the-nav" className="justify-content-end">
 						<Nav className="">
 							{navInfo.map((info, id) => {
-								const { icon, tip, tag, place } = info;
+								const { icon, tip, tag } = info;
 								return (
 									<Nav.Link
 										data-tip={tip}
@@ -222,8 +228,6 @@ const Wrap = styled.div`
 		}
 	}
 `;
-
-const NavItemsContainer = styled.div``;
 
 const StyledReactTooltip = styled(ReactTooltip)`
 	background: var(--sidebar-bg) !important;

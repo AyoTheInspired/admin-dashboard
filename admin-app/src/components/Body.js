@@ -1,18 +1,21 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import { Container } from "react-bootstrap";
 import Sidebar from "./Sidebar";
 import Content from "./Content";
-import AccordionTest from "../AccordionTest";
+import { SidebarContext } from "./SidebarContext";
 
 function Body() {
+	const [showSidebar, setShowSidebar] = useContext(SidebarContext);
 	return (
-		<Container fluid className="px-0">
-			<Section className="d-flex justify-content-between">
-				<Sidebar />
-				<Content />
-			</Section>
-		</Container>
+		<>
+			<Container fluid className="px-0">
+				<Section className="d-flex justify-content-between">
+					{showSidebar && <Sidebar />}
+					<Content />
+				</Section>
+			</Container>
+		</>
 	);
 }
 

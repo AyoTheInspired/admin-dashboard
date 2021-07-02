@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import Chart from "react-apexcharts";
+import React from "react";
+import { uid } from "react-uid";
 import { Bar } from "react-chartjs-2";
 import styled from "styled-components";
 import { Badge } from "react-bootstrap";
@@ -44,11 +44,6 @@ function ChartFeed() {
 							},
 						],
 					}}
-					options={
-						{
-							// maintainAspectRatio: false,
-						}
-					}
 				/>
 			</Graph>
 			<DailyFeed className="feed__wrapper col-lg col-md col-sm-10 d-flex flex-column p-3">
@@ -67,6 +62,7 @@ function ChartFeed() {
 									width="36"
 									height="36"
 									className="feed__image mr-2"
+									key={uid(msg)}
 								/>
 							</div>
 							<div>

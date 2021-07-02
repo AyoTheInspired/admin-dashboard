@@ -1,5 +1,4 @@
 import React from "react";
-import { Container, Row } from "react-bootstrap";
 import styled from "styled-components";
 import SidebarBottom from "./sidebar/SidebarBottom";
 import SidebarMid from "./sidebar/SidebarMid";
@@ -7,7 +6,6 @@ import SidebarTop from "./sidebar/SidebarTop";
 import { GrStatusGoodSmall } from "react-icons/gr";
 import { FiBox } from "react-icons/fi";
 import "./sidebar/sidebarStyles.css";
-import { uid } from "react-uid";
 
 function Sidebar() {
 	return (
@@ -52,18 +50,22 @@ function Sidebar() {
 export default Sidebar;
 
 const Wrap = styled.div`
+	transition: all 0.5s linear;
 	background: var(--sidebar-bg);
 	color: var(--pale-2);
-	max-width: 250px !important;
 	min-width: 250px !important;
+	max-width: 250px !important;
 	@media (max-width: 425px) {
 		max-width: 60% !important;
 	}
 `;
 
-const StatusContainer = styled(Container)`
-	position: sticky;
-	top: 50px;
+const StatusContainer = styled.div`
+	position: fixed;
+	min-width: 250px;
+	max-width: 250px;
+	left: 0 !important;
+	bottom: 0 !important;
 `;
 
 // https://appstack-react.bootlab.io/dashboard/default

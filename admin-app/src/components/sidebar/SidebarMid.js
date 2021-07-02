@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { sidebarMidInfo } from "../../appData";
 import "./sidebarStyles.css";
 import { Badge, Accordion, Card } from "react-bootstrap";
-import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
+import { MdKeyboardArrowDown } from "react-icons/md";
 import { uid } from "react-uid";
 
 function SidebarMid() {
@@ -21,6 +21,7 @@ function SidebarMid() {
 								<Accordion.Toggle
 									as={Card.Header}
 									eventKey={title}
+									key={uid(title)}
 									className="sidebar-toggle d-flex justify-content-between align-items-center px-0 py-1">
 									<div className="sidebar__item-a">
 										<span className="sidebar__title-icon mr-2">{icon}</span>
