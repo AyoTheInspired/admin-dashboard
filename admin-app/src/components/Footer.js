@@ -7,16 +7,16 @@ function Footer() {
 	return (
 		<Container fluid className="mt-4">
 			<Row>
-				<Wrap className=" p-4 col mx-auto d-flex justify-content-center align-items-center">
-					<div className="footer__left-wrap col-6 d-flex">
+				<Wrap className="py-4 col mx-auto d-flex justify-content-between align-items-center flex-wrap">
+					<div className="footer__left-wrap mx-auto flexed col-lg-7 col-md-6 col-sm-10">
 						{" "}
 						<h6 className="mb-0 footer__left-item mr-3">Support</h6>
 						<h6 className="mb-0 footer__left-item mr-3">Help Center</h6>
 						<h6 className="mb-0 footer__left-item mr-3">Privacy</h6>
 						<h6 className="mb-0 footer__left-item">Terms of Service</h6>
 					</div>
-					<div className="footer__right-wrap col-6 d-flex justify-content-end align-items-center">
-						<span className="copyright-container mr-2 mb-1">
+					<div className="footer__right-wrap mx-auto flexed col-lg-3 col-md-5 col-sm-10">
+						<span className="copyright-container mr-2 ">
 							<FaRegCopyright />
 						</span>
 						<h5 className="mb-0 footer__right-text">
@@ -41,5 +41,12 @@ const Wrap = styled.div`
 		color: #495057;
 		font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI",
 			"Helvetica Neue", Arial, sans-serif;
+		white-space: nowrap;
+	}
+
+	.footer__left-wrap {
+		@media (max-width: 768px) {
+			margin-bottom: 15px;
+		}
 	}
 `;

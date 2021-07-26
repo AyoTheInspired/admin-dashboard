@@ -1,13 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import SidebarBottom from "./sidebar/SidebarBottom";
 import SidebarMid from "./sidebar/SidebarMid";
 import SidebarTop from "./sidebar/SidebarTop";
+import { SidebarContext } from "./SidebarContext";
 import { GrStatusGoodSmall } from "react-icons/gr";
 import { FiBox } from "react-icons/fi";
+
 import "./sidebar/sidebarStyles.css";
 
 function Sidebar() {
+	const [showSidebar, setShowSidebar] = useContext(SidebarContext);
+
 	return (
 		<>
 			<Wrap className="px-0 pb-0 col-md-4 col-sm d-flex flex-column justify-content-start">
@@ -20,7 +24,10 @@ function Sidebar() {
 				<SidebarTop />
 				<SidebarMid />
 				<SidebarBottom />
-				<StatusContainer fluid className="user__wrap mt-4 px-0 py-2 d-lg-block">
+				<StatusContainer
+					showSidebar={showSidebar}
+					fluid
+					className="user__wrap mt-4 px-0 py-2 d-lg-block">
 					<div className="user__container flexed">
 						<div className="user__img-div  pl-2 pr-1 flexed">
 							<img
@@ -55,6 +62,7 @@ const Wrap = styled.div`
 	color: var(--pale-2);
 	min-width: 250px !important;
 	max-width: 250px !important;
+	min-height: 100%;
 	@media (max-width: 425px) {
 		max-width: 60% !important;
 	}
@@ -64,8 +72,9 @@ const StatusContainer = styled.div`
 	position: fixed;
 	min-width: 250px;
 	max-width: 250px;
-	left: 0 !important;
-	bottom: 0 !important;
+	/* left: 0 !important;
+	bottom: 0 !important; */
+	margin-left: ${({ showSidebar }) => (showSidebar ? "0" : "-250px")};
 `;
 
 // https://appstack-react.bootlab.io/dashboard/default

@@ -11,7 +11,11 @@ function Body() {
 		<>
 			<Container fluid className="px-0">
 				<Section className="d-flex justify-content-between">
-					{showSidebar && <Sidebar />}
+					{/* {showSidebar && <Sidebar />} */}
+
+					<Wrap showSidebar={showSidebar}>
+						<Sidebar />
+					</Wrap>
 					<Content />
 				</Section>
 			</Container>
@@ -23,5 +27,9 @@ export default Body;
 
 const Section = styled.section`
 	position: relative;
-	background: var(--body-bg);
+`;
+
+const Wrap = styled.div`
+	transition: var(--sht-trans);
+	margin-left: ${({ showSidebar }) => (showSidebar ? "0" : "-250px")};
 `;
