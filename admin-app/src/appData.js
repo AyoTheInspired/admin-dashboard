@@ -47,7 +47,6 @@ export const navInfo = [
 ];
 
 export const sidebarTopInfo = [
-	// sidebarName: "Pages",
 	{
 		icon: <ImEqualizer2 />,
 		title: "Dashboards",
