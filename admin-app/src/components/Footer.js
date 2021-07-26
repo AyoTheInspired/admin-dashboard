@@ -49,4 +49,13 @@ const Wrap = styled.div`
 			margin-bottom: 15px;
 		}
 	}
+
+	.footer__left-item {
+		cursor: pointer;
+		transition: var(--sht-trans);
+		&:hover {
+			transform: scale(1.03);
+			color: #000;
+		}
+	}
 `;
