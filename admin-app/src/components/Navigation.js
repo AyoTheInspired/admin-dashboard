@@ -10,7 +10,6 @@ import { SidebarContext } from "./SidebarContext";
 function Navigation() {
 	const [mobileView, setMobileView] = useState(false);
 	const [showSidebar, setShowSidebar] = useContext(SidebarContext);
-	// const [burgerClicked, setBurgerClicked] = useState(false);
 
 	window.addEventListener("resize", function () {
 		if (window.innerWidth <= 768) {
@@ -48,12 +47,6 @@ function Navigation() {
 						</Navbar.Brand>
 						<div className="mr-auto"></div>
 					</div>
-					{/* <Navbar.Toggle
-						aria-controls="the-nav"
-						className="nav-toggler"
-						onClick={() => setBurgerClicked(!burgerClicked)}>
-						{burgerClicked ? <FaTimes /> : <FaBars />}
-					</Navbar.Toggle> */}
 
 					<Navbar.Collapse id="the-nav" className="justify-content-end">
 						<Nav className="">
